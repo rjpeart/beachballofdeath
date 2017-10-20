@@ -1,0 +1,26 @@
+<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+<a-scene>
+  <a-assets>
+    <a-asset-item id="pinwheel-obj" src="https://cdn.glitch.com/818b3c0e-68c9-4a9f-b794-a6b40ddc3b76%2Fpinwheel.obj?1508512103106"></a-asset-item>
+    <a-asset-item id="test-obj" src="https://cdn.glitch.com/818b3c0e-68c9-4a9f-b794-a6b40ddc3b76%2Ftest.obj?1508511192312"></a-asset-item>
+    <a-asset-item id="pinwheel-mtl" src="my-folder/pinwheel.mtl"></a-asset-item>
+    <a-asset-item id="pinwheel" src="https://cdn.glitch.com/818b3c0e-68c9-4a9f-b794-a6b40ddc3b76%2Fblah-01.png?1508359845027"></a-asset-item>
+<!--     <a-asset-item id="sky" src="https://cdn.glitch.com/96703669-c4a6-4653-8e82-67284f34c59c%2Fskybox.png?1508237402226"></a-asset-item>
+     -->
+  </a-assets>
+    
+  <a-entity position="0 1.5 -2" rotation="-90 -90 -90">
+    <a-entity obj-model="obj: #pinwheel-obj; mtl: #pinwheel-mtl" >
+      <a-animation
+      attribute="rotation"
+      easing="linear"
+      dur="1000"
+      to="0 -360 0"
+      repeat="indefinite">
+    </a-animation> 
+  </a-entity>
+  </a-entity>
+  
+  <a-sky image="#sky"></a-sky>
+</a-scene>
